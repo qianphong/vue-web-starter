@@ -1,0 +1,13 @@
+@use 'element-plus/theme-chalk/src/dark/css-vars.scss' as *;
+
+html {
+  background-color: var(--el-bg-color);
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+:root {
+  --primary-color: var(--el-primary-color);
+}
