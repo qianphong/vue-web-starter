@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { useAppStore } from '@/store/modules/app'
-
-const appStore = useAppStore()
-
+const darkMode = useDark()
+function toggleDarkMode() {
+  darkMode.value = !darkMode.value
+}
 function toggleDark(event: MouseEvent) {
   const isAppearanceTransition =
     // @ts-expect-error experimental API
@@ -10,7 +10,7 @@ function toggleDark(event: MouseEvent) {
     !window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
   if (!isAppearanceTransition) {
-    appStore.toggleDarkMode()
+    toggleDarkMode()
     return
   }
 
@@ -22,7 +22,7 @@ function toggleDark(event: MouseEvent) {
   )
   // @ts-expect-error: Transition API
   const transition = document.startViewTransition(async () => {
-    appStore.toggleDarkMode()
+    toggleDarkMode()
 
     await nextTick()
   })
@@ -33,12 +33,12 @@ function toggleDark(event: MouseEvent) {
     ]
     document.documentElement.animate(
       {
-        clipPath: appStore.darkMode ? [...clipPath].reverse() : clipPath,
+        clipPath: darkMode ? [...clipPath].reverse() : clipPath,
       },
       {
         duration: 400,
         easing: 'ease-out',
-        pseudoElement: appStore.darkMode
+        pseudoElement: darkMode
           ? '::view-transition-old(root)'
           : '::view-transition-new(root)',
       },
