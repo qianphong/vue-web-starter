@@ -1,7 +1,6 @@
 import { defineStore } from 'pinia'
 import { store } from '@/store'
 import { router } from '@/router'
-import type { UserStore } from '@/types'
 import {
   clearAuthCache,
   getToken,
@@ -11,7 +10,7 @@ import {
   getRoles,
   setRules,
 } from '@/utils/auth'
-import { Login } from '@/api'
+import { login } from '@/api'
 
 interface UserState {
   /** token */
@@ -53,7 +52,7 @@ export const useUserStore = defineStore('user', {
     },
     /** 登入 */
     async login(body: UserStore['loginParams']) {
-      const data = await Login(body)
+      const data = await login(body)
       // 保存 token
       this.SET_TOKEN(data.token)
       this.SET_ROLES(data.roles)

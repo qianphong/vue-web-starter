@@ -1,21 +1,3 @@
-import type { App } from 'vue'
-import type { Router } from 'vue-router'
+function parseInt(s: string | number, radix?: number): number
 
-export type UserModule = (ctx: {
-  app: App
-  router: Router
-  store: Pinia
-}) => void
-
-export type UserStore = {
-  loginParams: {
-    userName: string
-    password: string
-  }
-  userInfo: {
-    id: string | number
-    name: string
-    token: string
-    roles: string[]
-  }
-}
+function parseFloat(string: string | number): number

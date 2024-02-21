@@ -1,8 +1,7 @@
-import type { UserModule } from '@/types'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 
-export const install: UserModule = ({ router }) => {
+export const install: AppModule = ({ router }) => {
   router.beforeEach((to, from) => {
     if (to.path !== from.path) NProgress.start()
   })

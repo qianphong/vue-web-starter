@@ -1,6 +1,4 @@
-import type { UserStore } from '@/types'
-
-export function Login(
+export function login(
   _params: UserStore['loginParams'],
 ): Promise<UserStore['userInfo']> {
   return Promise.resolve({

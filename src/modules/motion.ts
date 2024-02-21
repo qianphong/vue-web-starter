@@ -1,7 +1,5 @@
-import type { UserModule } from '@/types'
-
 import { MotionPlugin } from '@vueuse/motion'
 
-export const install: UserModule = ({ app }) => {
+export const install: AppModule = ({ app }) => {
   app.use(MotionPlugin)
 }
