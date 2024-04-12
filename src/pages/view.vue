@@ -39,9 +39,6 @@ const option2: EChartsOption = {
 
 <template>
   <div class="data-view">
-    <div class="absolute left-5 top-5 z-10">
-      <SettingsColorMode class="text-white" />
-    </div>
     <div
       class="data-view-header flex items-center justify-center animate__animated animate__slideInDown animate__fast"
     >

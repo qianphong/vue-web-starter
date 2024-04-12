@@ -1,5 +1,4 @@
 import { WebStorage } from '@qianphong/utils'
-import type { UserStore } from '@/types'
 
 // token key
 export const TOKEN_KEY = 'TOKEN__'

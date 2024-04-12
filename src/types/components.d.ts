@@ -7,6 +7,7 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    AppFooter: typeof import('./../components/App/AppFooter.vue')['default']
     AppHeader: typeof import('./../components/App/AppHeader.vue')['default']
     ElAside: typeof import('element-plus/es')['ElAside']
     ElAvatar: typeof import('element-plus/es')['ElAvatar']
@@ -25,6 +26,7 @@ declare module 'vue' {
     ElMenuItem: typeof import('element-plus/es')['ElMenuItem']
     ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
     Motion: typeof import('./../components/Motion.vue')['default']
+    MotionGroup: typeof import('./../components/MotionGroup.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SettingsColorMode: typeof import('./../components/Settings/SettingsColorMode.vue')['default']

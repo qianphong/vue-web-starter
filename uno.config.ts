@@ -10,9 +10,13 @@ export default defineConfig({
   theme: {
     colors: {
       primary: 'var(--primary-color)',
-      text_color_primary: 'var(--el-text-color-primary)',
-      text_color_regular: 'var(--el-text-color-regular)',
       bg_color: 'var(--el-bg-color)',
+    },
+    spacing: {
+      large: '20px',
+      base: '16px',
+      small: '12px',
+      tiny: '8px',
     },
   },
   rules: [

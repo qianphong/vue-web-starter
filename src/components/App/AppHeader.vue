@@ -17,10 +17,9 @@ function handleCommand(command: string) {
 </script>
 
 <template>
-  <header class="bg-[#0F3ABF] px-10 py-3 flex items-center justify-between">
+  <header class="bg-[#0F3ABF] px-10 fixed w-full z-99 flex-bc h-15">
     <h2 class="text-white">{{ appStore.title }}</h2>
     <div class="flex space-x-5 text-white">
-      <SettingsColorMode />
       <ElDropdown @command="handleCommand">
         <div class="flex items-center text-white">
           <ElAvatar :size="30">

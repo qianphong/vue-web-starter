@@ -1,8 +1,8 @@
 import { resolve } from 'path'
 import { defineConfig, loadEnv } from 'vite'
 import Vue from '@vitejs/plugin-vue'
-import VueRouter from 'unplugin-vue-router/vite'
 import UnoCSS from 'unocss/vite'
+import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
@@ -21,8 +21,7 @@ export default defineConfig(({ mode }) => {
       VueDevTools(),
       UnoCSS(),
       WebConfig(),
-      VueRouter({
-        dts: 'src/types/typed-router.d.ts',
+      Pages({
         exclude: ['**/components/**', '**/**/*.ts'],
       }),
       Layouts(),

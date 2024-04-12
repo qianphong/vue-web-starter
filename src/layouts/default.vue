@@ -2,7 +2,7 @@
 
 <template>
   <AppHeader />
-  <main class="relative">
+  <main class="relative pt-15">
     <RouterView v-slot="{ Component, route }">
       <Transition name="blur">
         <!-- <KeepAlive :include="include" :max="1"> -->
@@ -11,9 +11,7 @@
       </Transition>
     </RouterView>
   </main>
-  <div class="fixed bottom-4 left-0 right-0 w-40 mx-auto text-center">
-    [default layout]
-  </div>
+  <AppFooter />
 </template>
 
 <style>

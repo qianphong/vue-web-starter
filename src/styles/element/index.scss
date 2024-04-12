@@ -1,6 +1,6 @@
 $--colors: (
   'primary': (
-    'base': #3571de,
+    'base': #1f50ab,
   ),
 );
 
@@ -10,6 +10,3 @@ $--colors: (
   // do not use same name, it will override.
   $colors: $--colors
 );
-
-// custom dark variables
-@use './dark.scss';
